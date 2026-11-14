@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MUSEUM OF SOUND 聲音博物館，一座可探索華語與世界流行音樂、四大主題展區與經典專輯牆的線上唱片博物館。">
+  <title>MUSEUM OF SOUND｜聲音博物館</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">MUSEUM OF SOUND<small>聲 音 博 物 館</small></a>
+      <nav class="navlinks">
+        <a href="#halls">四大展區</a>
+        <a href="#artists">音樂人典藏</a>
+        <a href="#albums">專輯收藏牆</a>
+        <a href="#about">策展理念</a>
+        <button id="fav-toggle" class="fav-nav-btn" type="button">★ 我的收藏 (<span id="fav-count">0</span>)</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-banner">
+      <section class="wrap hero">
+        <div>
+          <div class="eyebrow">A CURATED EXHIBITION OF MUSIC & MEMORIES</div>
+          <h1>走進聲音博物館，<br>聆聽跨世代的經典。</h1>
+          <p>從經典港樂、台灣獨立樂團、華語 R&B 到世界搖滾與流行巨星。我們以實體唱片博物館為靈感，策劃四大常設展區與黑膠專輯牆，收藏每一段值得反覆回味的旋律故事。</p>
+          <div class="hero-actions">
+            <a class="btn-gold" href="#halls">進入四大展區 ↓</a>
+            <a class="btn-outline-light" href="#albums">瀏覽專輯收藏牆</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="旋轉黑膠唱片展示櫃">
+          <div class="vinyl-stage">
+            <div class="record"></div>
+          </div>
+          <span class="hero-note">Exhibition Hall · Side A — Analog & Digital Memories</span>
+        </div>
+      </section>
+    </div>
+
+    <section class="halls-strip" id="halls">
+      <div class="wrap">
+        <div class="eyebrow">PERMANENT EXHIBITIONS</div>
+        <h2 style="font:600 26px 'Noto Serif TC',serif;margin:4px 0 0;color:var(--walnut);">四大主題常設展區（點擊切換展間）</h2>
+        <div class="halls-grid">
+          <button class="hall-card" data-hall="01" type="button">
+            <span class="hall-num">HALL 01</span>
+            <h3>香港與華語經典</h3>
+            <p>張國榮、Beyond、王菲、陳奕迅、鄧紫棋</p>
+          </button>
+          <button class="hall-card" data-hall="02" type="button">
+            <span class="hall-num">HALL 02</span>
+            <h3>世界流行音樂</h3>
+            <p>Michael Jackson、Air Supply、Westlife、Aerosmith、Bon Jovi、Queen</p>
+          </button>
+          <button class="hall-card" data-hall="03" type="button">
+            <span class="hall-num">HALL 03</span>
+            <h3>台灣樂團與獨立音樂</h3>
+            <p>蘇打綠、五月天、美秀集團、芒果醬</p>
+          </button>
+          <button class="hall-card" data-hall="04" type="button">
+            <span class="hall-num">HALL 04</span>
+            <h3>華語創作與 R&B</h3>
+            <p>周杰倫、陶喆、方大同、嚴爵、李聖傑、張震嶽、玖壹壹</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="artists">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">ARTIST ARCHIVES</div>
+          <h2>音樂人典藏館</h2>
+          <p>支援關鍵字搜尋，並可依「展區、年代、地區、曲風」多維度探索，或點擊星號建立個人收藏清單。</p>
+        </div>
+        <span id="artist-count" class="number">22 EXHIBITS</span>
+      </div>
+
+      <div class="curation-panel">
+        <div class="search-row">
+          <input id="search" class="search" type="search" placeholder="搜尋音樂人、英文名、代表作或地區…" aria-label="搜尋音樂人">
+          <select id="era-filter" class="select-box" aria-label="依年代篩選"></select>
+          <select id="region-filter" class="select-box" aria-label="依地區篩選"></select>
+          <button id="reset-filters" class="reset-btn" type="button">重設條件</button>
+        </div>
+        <div id="genre-filters" class="tools" aria-label="依曲風篩選"></div>
+      </div>
+
+      <div id="artist-list" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="album-wall-section" id="albums">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">VINYL COLLECTION WALL</div>
+            <h2>經典黑膠專輯收藏牆</h2>
+            <p>精選各展區代表性專輯，點擊可進入對應音樂人專屬展間查看完整介紹與官方收聽連結。</p>
+          </div>
+          <span class="number">CURATED LP SLEEVES</span>
+        </div>
+        <div id="album-wall" class="album-grid"></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="about">
+      <div class="about">
+        <div>
+          <div class="eyebrow">CURATORIAL STATEMENT</div>
+          <h2>一座可持續擴充的<br>線上音樂博物館。</h2>
+        </div>
+        <div>
+          <p>「MUSEUM OF SOUND 聲音博物館」採用「深胡桃木 × 奶油白 × 古銅金 × 酒紅色」的博物館策展美學，將華語經典、台灣獨立樂團、華語 R&B 與世界流行搖滾整合於同一座數位展館。</p>
+          <p>本專案透過 <strong>AGENTS.md</strong> 定義嚴謹的資料結構（<code>assets/js/artists.js</code>）、四大展區分類與獨立展間模板，讓 AI 協作夥伴能隨時依循相同標準擴充新的音樂人與專輯展品。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer">
+      <span>© 2026 MUSEUM OF SOUND · 聲音博物館</span>
+      <span>所有音樂作品均導向 Spotify / YouTube 官方搜尋與合法平台，不提供未授權音檔與完整歌詞。</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/artists.js"></script>
+  <script src="assets/js/media-enhancer.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
